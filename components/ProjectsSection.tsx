@@ -1,0 +1,91 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import SlideUp from "./SlideUp";
+import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
+import Underline from "./Underline";
+
+const projects = [
+  {
+    name: "Thankful Thoughts",
+    description:
+      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
+    image: "/thankfulthoughts.png",
+    github: "",
+    link: "https://thankfulthoughts.io/",
+  },
+  {
+    name: "PlatoIO",
+    description: "PlatoIO is a to do list app that built using the PERN stack.",
+    image: "/platoio.png",
+    github: "",
+    link: "https://platoio.com/register",
+  },
+  {
+    name: "Kator Family Photos",
+    description:
+      "Kator Family Photos is a photos and video digitization service in the LA area.",
+    image: "/familyphotos.png",
+    github: "",
+    link: "https://katorfamilyphotos.com/",
+  },
+];
+
+const ProjectsSection = () => {
+  return (
+    <section id="projects">
+      <h1 className="my-10 text-center font-bold text-4xl text-slate-900">
+        Projects
+        <Underline />
+      </h1>
+
+      <div className="flex flex-col space-y-20 px-10 pb-36">
+        {projects.map((project, idx) => {
+          return (
+            <div key={idx}>
+              <SlideUp offset="-300px 0px -300px 0px">
+                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-y-0 md:space-x-12 border-[2px] border-slate-900 p-4 md:p-0 rounded-md">
+                  <div className=" md:w-1/2 md:p-8 md:bg-slate-200 rounded-md">
+                    <Link href={project.link}>
+                      <Image
+                        src={project.image}
+                        alt=""
+                        width={1000}
+                        height={1000}
+                        className="rounded-xl hover:opacity-70 border-[2px] border-slate-900"
+                      />
+                    </Link>
+                  </div>
+                  <div className="mt-8 md:w-1/2 md:p-8">
+                    <h1 className="text-4xl font-bold mb-6 text-slate-900">
+                      {project.name}
+                    </h1>
+                    <p className="text-xl leading-7 mb-4 ">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-row align-bottom space-x-4">
+                      <Link href={project.github} target="_blank">
+                        <BsGithub
+                          size={30}
+                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                        />
+                      </Link>
+                      <Link href={project.link} target="_blank">
+                        <BsArrowUpRightSquare
+                          size={30}
+                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </SlideUp>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;
