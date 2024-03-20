@@ -1,31 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Underline from "./Underline";
-import { Tooltip } from "react-tooltip";
 
-const skills = [
-  { skill: "Solidity" },
-  { skill: "Ethereum" },
-  { skill: "ReactJs" },
-  { skill: "BlockChain" },
-  { skill: "JavaScript" },
-  { skill: "TypeScript" },
-  { skill: "NodeJs" },
-  { skill: "NextJs" },
-  { skill: "Web3.js" },
-  { skill: "Ethers.js" },
-  { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "Git" },
-  { skill: "C++" },
-  { skill: "MongoDB" },
-  { skill: "SQL" },
-  { skill: "Python" },
-  { skill: "Flask" },
-  { skill: "Tensorflow" },
-];
+import skillList from "@/constants/skills.js";
 
-const AboutSection = () => {
+const proficiencyCalculator = (proficiency: number) => {
+  const width = Math.floor((proficiency / 10) * 100);
+  return width.toString() + "%";
+};
+
+const Skills = () => {
   return (
     <section id="skills">
       <div className="my-12 pb-12 md:pt-16 md:pb-48">
@@ -33,26 +17,48 @@ const AboutSection = () => {
           Skills
           <Underline />
         </h1>
+        <br />
+        <div className="flex flex-col justify-center z-10 text-center md:text-left space-y-2 md:mx-20">
+          {skillList.map((skill, idx) => {
+            return (
+              <div
+                key={idx}
+                className="bg-transparent border-[1px] border-slate-900 rounded-md py-4 px-8 w-full"
+              >
+                <h1 className="font-bold text-xl text-red-500 pb-4">
+                  {skill.title}
+                </h1>
 
-        <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
-          <div className="text-center md:w-full">
-            <div className="flex flex-wrap flex-row justify-center z-10">
-              {skills.map((item, idx) => {
-                return (
-                  <p
-                    key={idx}
-                    className="bg-transparent px-4 py-2 mr-2 mt-2 text-slate-500 rounded font-semibold border-[2px] border-slate-900 hover:bg-red-600 hover:border-red-600 hover:text-slate-50 cursor-pointer"
-                  >
-                    {item.skill}
-                  </p>
-                );
-              })}
-            </div>
-          </div>
+                <div className="p-2 bg-slate-200 rounded-md">
+                  {skill.contents.map((content, id) => {
+                    return (
+                      <div
+                        key={id}
+                        className="py-2 flex flex-col md:flex-row justify-between items-center"
+                      >
+                        <h1 className="mb-1 font-semibold md:w-2/6">
+                          {content.name}
+                        </h1>
+
+                        <div className="bg-slate-100 mb-1 border-[1px] border-slate-400 rounded-sm w-full md:w-4/6 h-2">
+                          <div
+                            className="bg-slate-400 h-full rounded-sm "
+                            style={{
+                              width: proficiencyCalculator(content.proficiency),
+                            }}
+                          ></div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
 
-export default AboutSection;
+export default Skills;

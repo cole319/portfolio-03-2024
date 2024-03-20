@@ -67,7 +67,7 @@ const HeroSection = () => {
             </Link>
             <Link
               to="contact"
-              className="text-slate-900 font-semibold px-6 py-2 bg-transparent rounded shadow hover:bg-slate-900 hover:text-slate-50 border-2 border-slate-900 cursor-pointer"
+              className="text-slate-900 font-semibold px-6 py-2 bg-transparent rounded shadow hover:bg-slate-900 hover:text-slate-50 duration-300 border-2 border-slate-900 cursor-pointer"
               activeClass="active"
               spy={true}
               smooth={true}

@@ -12,19 +12,50 @@ const AboutSection = () => {
         </h1>
         <br />
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-y-0  md:flex-row md:text-left border-2 border-slate-200 rounded-md">
-          <div className="w-full md:w-1/2 px-10 pb-10 md:p-10 bg-slate-200 ">
-            <br />
-            <p className="text-xl text-center md:text-left">Hi !</p>
-            <p className="text-lg text-center md:text-left">
-              I am a passionate blockchain and frontend developer, creating
-              innovative and user friendly web applications. I have a strong
-              background in Solidity, Ethereum, Web3.js, ReactJS, NextJS, and
-              JavaScript, as well as a keen interest in emerging technologies
-              and trends in the decentralized space. I am excited to see where
-              my career takes me and am always open to new opportunities.
-            </p>
+          <div className="w-full md:w-3/5 px-10 pb-10 md:p-10 bg-slate-200 pt-10 ">
+            <div className="flex flex-col space-y-2">
+              <div className="bg-slate-100 space-y-2 space-x-0 rounded-md shadow-sm py-2 px-4 ">
+                {/* <div className="w-1/2 bg-slate-100">yoi</div>
+              <div className="w-1/2 bg-slate-100">yoi</div> */}
+                <div className="flex space-x-4">
+                  <h1 className="font-semibold text-red-500">Education: </h1>
+                  <div>
+                    <p>
+                      Bachelor of Technology in Computer Science and Engineering
+                    </p>
+                    <p className="font-medium">IIT (ISM) Dhanbad</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-slate-100 space-y-2 space-x-0 rounded-md shadow-sm py-2 px-4 ">
+                {/* <div className="w-1/2 bg-slate-100">yoi</div>
+              <div className="w-1/2 bg-slate-100">yoi</div> */}
+                <div className="flex space-x-4">
+                  <h1 className="font-semibold text-red-500">Experience: </h1>
+                  <div>
+                    <p>
+                      Bachelor of Technology in Computer Science and Engineering
+                    </p>
+                    <p className="font-medium">IIT (ISM) Dhanbad</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <br />
+              <p className="text-xl text-center md:text-left">Hi !</p>
+              <p className="text-lg text-center md:text-left">
+                I am a passionate blockchain and frontend developer, creating
+                innovative and user friendly web applications. I have a strong
+                background in Solidity, Ethereum, Web3.js, ReactJS, NextJS, and
+                JavaScript, as well as a keen interest in emerging technologies
+                and trends in the decentralized space. I am excited to see where
+                my career takes me and am always open to new opportunities.
+              </p>
+            </div>
           </div>
-          <div className="text-center hidden md:w-1/2 md:text-left pr-10 md:flex md:flex-col md:justify-center pb-10 md:pb-0 hover:animate-pulse">
+          <div className="text-center hidden md:w-2/5 md:text-left pr-10 md:flex md:flex-col md:justify-center pb-10 md:pb-0 hover:animate-pulse">
             <Image
               src="/blingbot.svg"
               alt=""
