@@ -15,28 +15,21 @@ const AboutSection = () => {
           <div className="w-full md:w-3/5 px-10 pb-10 md:p-10 bg-slate-200 pt-10 ">
             <div className="flex flex-col space-y-2">
               <div className="bg-slate-100 space-y-2 space-x-0 rounded-md shadow-sm py-2 px-4 ">
-                {/* <div className="w-1/2 bg-slate-100">yoi</div>
-              <div className="w-1/2 bg-slate-100">yoi</div> */}
-                <div className="flex space-x-4">
-                  <h1 className="font-semibold text-red-500">Education: </h1>
-                  <div>
-                    <p>
-                      Bachelor of Technology in Computer Science and Engineering
-                    </p>
-                    <p className="font-medium">IIT (ISM) Dhanbad</p>
+                <h1 className="font-semibold text-red-500">Education: </h1>
+                <div className="p-1">
+                  <div className="flex">
+                    <h1 className="w-2/5 font-semibold">Degree:</h1>
+                    <p className="w-3/5">Bachelor of Technology (B.Tech)</p>
                   </div>
-                </div>
-              </div>
-              <div className="bg-slate-100 space-y-2 space-x-0 rounded-md shadow-sm py-2 px-4 ">
-                {/* <div className="w-1/2 bg-slate-100">yoi</div>
-              <div className="w-1/2 bg-slate-100">yoi</div> */}
-                <div className="flex space-x-4">
-                  <h1 className="font-semibold text-red-500">Experience: </h1>
-                  <div>
-                    <p>
-                      Bachelor of Technology in Computer Science and Engineering
+                  <div className="flex">
+                    <h1 className="w-2/5 font-semibold">Major:</h1>
+                    <p className="w-3/5">Computer Science and Engineering</p>
+                  </div>
+                  <div className="flex">
+                    <h1 className="w-2/5 font-semibold">Alma Mater:</h1>
+                    <p className="w-3/5">
+                      Indian Institute of Technology (ISM) Dhanbad
                     </p>
-                    <p className="font-medium">IIT (ISM) Dhanbad</p>
                   </div>
                 </div>
               </div>

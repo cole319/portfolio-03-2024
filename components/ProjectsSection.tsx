@@ -2,32 +2,30 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SlideUp from "./SlideUp";
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import Underline from "./Underline";
 
 const projects = [
   {
-    name: "Thankful Thoughts",
+    name: "ICO",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "",
-    link: "https://thankfulthoughts.io/",
+      "A custom ERC-20 Token named BridgeCoin (BGC) and a Crowdsale DApp for Initial Coin Offering (BGC Presale)",
+    image: "/eth.png",
+    github: "https://github.com/cole319/ICO-1.1.0",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "",
-    link: "https://platoio.com/register",
+    name: "POW Blockchain Protocol",
+    description:
+      "A Simple Proof of Work Blockchain Protocol written in Javascript utilizing crypto-js library",
+    image: "/blockchain.png",
+    github: "https://github.com/cole319/PoW-Blockchain-Protocol",
   },
   {
-    name: "Kator Family Photos",
+    name: "Estatigo",
     description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "",
-    link: "https://katorfamilyphotos.com/",
+      "A Full Stack Real Estate Application built with React.js utilizing Next.js 12 framework and using RapidAPI",
+    image: "/realestate.png",
+    github: "https://github.com/cole319/EstatiGo-1.2.0",
   },
 ];
 
@@ -44,15 +42,15 @@ const ProjectsSection = () => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-y-0 md:space-x-12 border-[2px] border-slate-900 p-4 md:p-0 rounded-md">
+                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-y-0 md:space-x-12 border-[1px] border-slate-900 p-4 md:p-0 rounded-md shadow-md">
                   <div className=" md:w-1/2 md:p-8 md:bg-slate-200 rounded-md">
-                    <Link href={project.link}>
+                    <Link href={project.github}>
                       <Image
                         src={project.image}
                         alt=""
                         width={1000}
                         height={1000}
-                        className="rounded-xl hover:opacity-70 border-[2px] border-slate-900"
+                        className="rounded-xl hover:opacity-70 border-[1px] border-slate-900"
                       />
                     </Link>
                   </div>
@@ -66,12 +64,6 @@ const ProjectsSection = () => {
                     <div className="flex flex-row align-bottom space-x-4">
                       <Link href={project.github} target="_blank">
                         <BsGithub
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                      <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />

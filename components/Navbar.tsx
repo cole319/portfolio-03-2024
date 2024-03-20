@@ -1,10 +1,7 @@
-"use client"; // this is a client component
+"use client";
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-scroll/modules";
-// import { usePathname } from "next/navigation";
-// import { useTheme } from "next-themes"
-// import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import Image from "next/image";
 
@@ -33,22 +30,12 @@ const NAV_ITEMS: Array<NavItem> = [
 ];
 
 export default function Navbar() {
-  // const { systemTheme, theme, setTheme } = useTheme()
-  // const currentTheme = theme === "system" ? systemTheme : theme
-  // const pathname = usePathname();
   const [navbar, setNavbar] = useState(false);
   return (
     <header className="w-full mx-auto px-4 md:px-20 fixed top-0 z-50 shadow bg-neutral-50">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:block">
-            {/* <Link to="home">
-              <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-semibold text-red-500">
-                  Suryarghya
-                </h2>
-              </div>
-            </Link> */}
             <Link
               to="home"
               spy={true}
@@ -62,7 +49,7 @@ export default function Navbar() {
                   alt=""
                   width={50}
                   height={50}
-                  className="cursor-pointer rounded-full bg-slate-950"
+                  className="cursor-pointer rounded-full bg-slate-950 hover:animate-pulse"
                 />
 
                 <div
@@ -98,7 +85,7 @@ export default function Navbar() {
                     key={idx}
                     to={item.page}
                     className={
-                      "block lg:inline-block text-slate-900 text-lg hover:text-slate-800 cursor-pointer hover:bg-slate-200 py-1 px-3 rounded-md"
+                      "block lg:inline-block text-slate-900 text-lg hover:text-slate-800 cursor-pointer hover:bg-slate-200 duration-300 py-1 px-3 rounded-md"
                     }
                     activeClass="active"
                     spy={true}
@@ -111,21 +98,6 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-              {/* {currentTheme === "dark" ? (
-                <button
-                  onClick={() => setTheme("light")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiSunLine size={25} color="black" />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setTheme("dark")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiMoonFill size={25} />
-                </button>
-              )} */}
             </div>
           </div>
         </div>

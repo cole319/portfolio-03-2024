@@ -1,11 +1,9 @@
 import React from "react";
-import Link from "next/link";
+
 import {
   AiOutlineGithub,
   AiOutlineTwitter,
   AiOutlineLinkedin,
-  AiOutlineYoutube,
-  AiOutlineMail,
 } from "react-icons/ai";
 
 const Footer = () => {

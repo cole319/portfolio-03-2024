@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
+import SlideUp from "./SlideUp";
 import Underline from "./Underline";
-
 import skillList from "@/constants/skills.js";
 
 const proficiencyCalculator = (proficiency: number) => {
@@ -23,7 +22,7 @@ const Skills = () => {
             return (
               <div
                 key={idx}
-                className="bg-transparent border-[1px] border-slate-900 rounded-md py-4 px-8 w-full"
+                className="bg-transparent border-[1px] border-slate-900 rounded-md py-4 px-8 w-full shadow-md"
               >
                 <h1 className="font-bold text-xl text-red-500 pb-4">
                   {skill.title}
@@ -42,7 +41,7 @@ const Skills = () => {
 
                         <div className="bg-slate-100 mb-1 border-[1px] border-slate-400 rounded-sm w-full md:w-4/6 h-2">
                           <div
-                            className="bg-slate-400 h-full rounded-sm "
+                            className="bg-gradient-to-r from-slate-400 to-slate-500 h-full rounded-sm "
                             style={{
                               width: proficiencyCalculator(content.proficiency),
                             }}

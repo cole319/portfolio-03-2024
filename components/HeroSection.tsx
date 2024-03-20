@@ -1,14 +1,11 @@
-"use client"; // this is a client component
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
-import { HiArrowDown } from "react-icons/hi";
 import {
   AiOutlineGithub,
   AiOutlineTwitter,
   AiOutlineLinkedin,
-  AiOutlineYoutube,
-  AiOutlineMail,
 } from "react-icons/ai";
 import { TypeAnimation } from "react-type-animation";
 
@@ -107,31 +104,8 @@ const HeroSection = () => {
               size={30}
             />
           </a>
-
-          {/* <a
-            href="https://www.youtube.com/channel/UCQBMkSDgbxDb8usMeXmOZyA"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiOutlineYoutube
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-slate-900 "
-              size={30}
-            />
-          </a> */}
         </div>
       </div>
-      {/* <div className="flex flex-row items-center text-center justify-center ">
-        <Link
-          to="about"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-        >
-          <HiArrowDown size={35} className="animate-bounce" />
-        </Link>
-      </div> */}
     </section>
   );
 };

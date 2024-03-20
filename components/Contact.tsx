@@ -24,12 +24,12 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Name"
-              className=" border-[2px] border-slate-900 rounded-md px-3 py-2"
+              className=" border-[1px] border-slate-900 rounded-md px-3 py-2"
             />
             <input
               type="email"
               placeholder="Email"
-              className="border-[2px] border-slate-900 rounded-md px-3 py-2"
+              className="border-[1px] border-slate-900 rounded-md px-3 py-2"
             />
             <textarea
               name=""
@@ -37,7 +37,7 @@ const Contact = () => {
               cols={30}
               rows={10}
               placeholder="Write Message"
-              className="border-[2px] border-slate-900 rounded-md  px-3 py-2"
+              className="border-[1px] border-slate-900 rounded-md  px-3 py-2"
             ></textarea>
             <button className="text-slate-50 font-semibold px-6 py-2 bg-slate-900 rounded shadow hover:bg-slate-800 border-2 border-slate-900 cursor-pointer">
               Send
