@@ -40,10 +40,7 @@ const skillList = [
         name: "Next.js",
         proficiency: 9,
       },
-      {
-        name: "Node.js",
-        proficiency: 8,
-      },
+
       {
         name: "Express.js",
         proficiency: 8,

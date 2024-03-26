@@ -31,6 +31,10 @@ const AboutSection = () => {
                       Indian Institute of Technology (ISM) Dhanbad
                     </p>
                   </div>
+                  <div className="flex">
+                    <h1 className="w-2/5 font-semibold">Year:</h1>
+                    <p className="w-3/5">Nov, 2020 - May, 2024</p>
+                  </div>
                 </div>
               </div>
             </div>

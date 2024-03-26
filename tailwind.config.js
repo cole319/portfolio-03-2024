@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -19,6 +20,7 @@ module.exports = {
         slideUp: "slideUp 0.5s",
         slideUpEaseInOut: "slideUp 0.5s ease-in-out",
         slideUpCubiBezier: "slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1)",
+        expandRight: "expandRight 3s ease",
       },
       animationDelay: {
         0: "0s",
@@ -42,6 +44,14 @@ module.exports = {
         bounce: {
           from: { transform: "translateY(10px)" },
           to: { transform: "translateY(0)" },
+        },
+        expandRight: {
+          from: {
+            width: "0px",
+          },
+          to: {
+            width: "full",
+          },
         },
       },
     },
